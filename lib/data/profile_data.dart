@@ -27,7 +27,7 @@ class ProjectInfo {
   final String description;
   final String iconPath;
   final String bannerPath;
-  final Map<String, String> links;
+  final Map<String, dynamic> links;
 
   const ProjectInfo( {
     required this.id,
@@ -200,25 +200,24 @@ Project is currently under development...''',
       iconPath: "",
       bannerPath: "",
       links: {
-        LinkType.github: "https://github.com/MaxHamza/nestle_water_app",
+        LinkType.website: "https://github.com/MaxHamza/nestle_water_app",
       },
     ),
     ProjectInfo(
       id:1,
       title: "Job Opportunities App",
       description:'''A job search app built with Flutter, using Cubit for state management and HTTP for API communication.
-It provides secure authentication, profile editing, and uploading of both CV and profile picture.
-Users can search for jobs with advanced filters and view detailed job information...
-They can also apply for jobs and track all their submitted applications within the app.''',
+It provides secure authentication, profile editing, and uploading of both CV and profile picture,Users can search for jobs with advanced filters and view detailed job information,
+They can also apply for jobs and track all their submitted applications within the app...''',
       iconPath: "",
       bannerPath: "",
       links: {
-        LinkType.github: "https://github.com/MaxHamza/partTimeApp",
+        LinkType.website: "https://github.com/MaxHamza/partTimeApp",
       },
     ),
   ];
 
-  static const List<ProjectInfo> mobileProjects = [
+  static  List<ProjectInfo> mobileProjects = [
     ProjectInfo(
       id:2,
       title: "Decor-app",
@@ -227,7 +226,7 @@ They can also apply for jobs and track all their submitted applications within t
       iconPath: "",
       bannerPath: "",
       links: {
-        LinkType.github:
+        LinkType.website:
             'https://github.com/MaxHamza/d-cor-app',
       },
     ),

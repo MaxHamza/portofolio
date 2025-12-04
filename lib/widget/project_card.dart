@@ -104,15 +104,15 @@ class ProjectCardState extends State<ProjectCard> {
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: widget.projectInfo.links.keys.map((e) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 2),
-                          child: LinkWidget(url: widget.projectInfo.links[e]!, linkType: e),
-                        );
-                      }).toList(),
-                    ),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.end,
+                    //   children: widget.projectInfo.links.keys.map((e) {
+                    //     return Padding(
+                    //       padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 2),
+                    //       child: LinkWidget(url: widget.projectInfo.links[e]!, linkType: e),
+                    //     );
+                    //   }).toList(),
+                    // ),
                   ],
                 ),
               ),
