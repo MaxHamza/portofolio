@@ -84,8 +84,8 @@ class ProjectCardState extends State<ProjectCard> {
                     Row(
                       children: [
                         if (widget.projectInfo.iconPath.isNotEmpty) ...[
-                          Image.asset(widget.projectInfo.iconPath, height: height * 0.05),
-                          SizedBox(width: width * 0.01),
+                       //   Image.asset(widget.projectInfo.iconPath, height: height * 0.05),
+                      //    SizedBox(width: width * 0.01),
                         ],
                         Expanded(
                           child: Text(
