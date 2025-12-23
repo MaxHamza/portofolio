@@ -111,7 +111,7 @@ class ProjectCardState extends State<ProjectCard> {
                     //       padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 2),
                     //       child: LinkWidget(url: widget.projectInfo.links[e]!, linkType: e),
                     //     ) ;
-                    //   }).toList(),
+                    //   }).toList() ,
                     // ) ,
                   ],
                 ),
