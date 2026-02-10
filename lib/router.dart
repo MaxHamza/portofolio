@@ -1,8 +1,8 @@
 import 'package:folio/sections/main/main_section.dart';
 import 'package:folio/sections/projects/project_details.dart';
 import 'package:go_router/go_router.dart';
-
 final GoRouter router = GoRouter(
+  initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
