@@ -3,6 +3,7 @@ import 'package:folio/configs/core_theme.dart' as theme;
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/provider/drawer_provider.dart';
 import 'package:folio/provider/scroll_provider.dart';
+import 'package:folio/router.dart';
 import 'package:folio/sections/main/main_section.dart';
 import 'package:folio/sections/projects/project_details.dart';
 import 'package:provider/provider.dart';
@@ -66,16 +67,14 @@ class _MaterialChildState extends State<MaterialChild> {
       designSize: Size(390, 844),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(
+      child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Hamza Makksousa',
         theme: theme.themeLight,
         darkTheme: theme.themeDark,
         themeMode: widget.provider.themeMode,
-        initialRoute: "/",
-        routes: {
-          "/": (context) =>  MainPage(),
-        },
+          routerConfig: router,
+       
       ),
     );
   }

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/sections/projects/project_details.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:folio/data/profile_data.dart';
-
 import '../sections/portfolio/link_widget.dart';
 import '../utils/project_utils.dart';
 
@@ -30,12 +30,14 @@ class ProjectCardState extends State<ProjectCard> {
       onTap: () {
         // debug print to confirm we have the right id
         debugPrint('ProjectCard tapped -> id=${widget.projectInfo.id}, title=${widget.projectInfo.title}');
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => ProjectsDetails(projectId: widget.projectInfo.id,isVideo:widget.projectInfo.id==2?true:false ,),
-          ),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => ProjectsDetails(projectId: widget.projectInfo.id,isVideo:widget.projectInfo.id==2?true:false ,),
+        //   ),
+        // );
+        context.go('/projects/${widget.projectInfo.id}',);
+
       },
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
@@ -85,7 +87,7 @@ class ProjectCardState extends State<ProjectCard> {
                       children: [
                         if (widget.projectInfo.iconPath.isNotEmpty) ...[
                        //   Image.asset(widget.projectInfo.iconPath, height: height * 0.05),
-                      //    SizedBox(width: width * 0.01),
+                      //     SizedBox(width: width *0.02),
                         ],
                         Expanded(
                           child: Text(
